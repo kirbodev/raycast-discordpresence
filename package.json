@@ -1,22 +1,39 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "hello",
-  "title": "Hello World",
-  "description": "Sample extension for Raycast",
+  "name": "discord-presence",
+  "title": "Discord Presence",
+  "description": "Set your Discord rich presence from Raycast",
   "icon": "extension-icon.png",
-  "author": "samliu",
+  "author": "kdv_",
   "license": "MIT",
   "commands": [
     {
-      "name": "hello",
-      "title": "hello",
-      "description": "Say hello. This is a sample command!",
+      "name": "setpresence",
+      "title": "Set Presence",
+      "description": "Set your Discord rich presence",
       "mode": "view"
+    },
+    {
+      "name": "removepresence",
+      "title": "Remove Presence",
+      "description": "Remove your Discord rich presence",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "applicationId",
+      "title": "Application ID",
+      "description": "The ID of your Discord application",
+      "type": "textfield",
+      "required": true,
+      "placeholder": "1234567891234567891"
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.101.1",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/utils": "^1.17.0",
+    "@xhayper/discord-rpc": "^1.3.0"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.0.4",
